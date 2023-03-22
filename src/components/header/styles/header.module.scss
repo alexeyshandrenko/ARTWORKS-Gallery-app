@@ -35,7 +35,7 @@
       @media (max-width: 767px) {
         gap: 35px;
       }
-      > li > a {
+      > li > .link {
         font-style: normal;
         font-weight: 300;
         font-size: 12px;
@@ -43,6 +43,9 @@
         color: #979595;
         text-transform: uppercase;
         transition: 0.5s;
+        &_active {
+          color: #000;
+        }
         @media (max-width: 992px) {
           font-size: 10px;
         }
@@ -53,3 +56,13 @@
     }
   }
 }
+
+// .active {
+//   color: #000;
+//   font-style: normal;
+//   font-weight: 300;
+//   font-size: 12px;
+//   line-height: 24px;
+//   text-transform: uppercase;
+//   transition: 0.5s;
+// }

@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
-
 import { FC, useContext, useEffect, useState } from "react";
-
+import { Link, NavLink, useMatch } from "react-router-dom";
 import styles from "./styles/header.module.scss";
 
 import Container from "../container/Container";
@@ -29,28 +27,88 @@ const Header = () => {
         <nav className={styles.header__navigation}>
           <ul>
             <li>
-              <Link to={"/"}>{locale === "ru" ? "Главная" : "Home"}</Link>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? `${styles.link} ${styles.link_pending}`
+                    : isActive
+                    ? `${styles.link} ${styles.link_active}`
+                    : styles.link
+                }
+                to={"/"}
+              >
+                {locale === "ru" ? "Главная" : "Home"}
+              </NavLink>
             </li>
             <li>
-              <Link to={"/watercolour"}>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? `${styles.link} ${styles.link_pending}`
+                    : isActive
+                    ? `${styles.link} ${styles.link_active}`
+                    : styles.link
+                }
+                to={"/watercolour"}
+              >
                 {locale === "ru" ? "Акварель" : "Water Colour"}
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to={"/acrylic"}>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? `${styles.link} ${styles.link_pending}`
+                    : isActive
+                    ? `${styles.link} ${styles.link_active}`
+                    : styles.link
+                }
+                to={"/acrylic"}
+              >
                 {locale === "ru" ? "Акрил" : "Acrylic"}
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to={"/phygital"}>Phygital</Link>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? `${styles.link} ${styles.link_pending}`
+                    : isActive
+                    ? `${styles.link} ${styles.link_active}`
+                    : styles.link
+                }
+                to={"/phygital"}
+              >
+                Phygital
+              </NavLink>
             </li>
             <li>
-              <Link to={"/about"}>{locale === "ru" ? "Обо мне" : "About"}</Link>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? `${styles.link} ${styles.link_pending}`
+                    : isActive
+                    ? `${styles.link} ${styles.link_active}`
+                    : styles.link
+                }
+                to={"/about"}
+              >
+                {locale === "ru" ? "Обо мне" : "About"}
+              </NavLink>
             </li>
             <li>
-              <Link to={"/contact"}>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? `${styles.link} ${styles.link_pending}`
+                    : isActive
+                    ? `${styles.link} ${styles.link_active}`
+                    : styles.link
+                }
+                to={"/contact"}
+              >
                 {locale === "ru" ? "Контакты" : "Contact"}
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <Burger isOpen={isOpen} toggleMenu={toggleMenu} />
