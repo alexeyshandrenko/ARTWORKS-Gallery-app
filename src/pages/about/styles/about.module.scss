@@ -1,0 +1,118 @@
+.main {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: modal;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  &__container {
+    width: 70%;
+    margin: 0 auto;
+    > img {
+      display: none;
+      width: 100%;
+      height: 320px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      @media (max-width: 500px) {
+        display: block;
+      }
+    }
+  }
+  &__description {
+    margin-bottom: 90px;
+    @media (max-width: 500px) {
+      margin-bottom: 40px;
+    }
+    > li {
+      margin-bottom: 30px;
+      @media (max-width: 500px) {
+        margin-bottom: 15px;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &__subtitle {
+    margin-bottom: 30px;
+    width: 80%;
+    @media (max-width: 500px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__dates {
+    margin-bottom: 100px;
+    @media (max-width: 500px) {
+      margin-bottom: 40px;
+    }
+    > li {
+      display: grid;
+      grid-template-columns: 10% 90%;
+      margin-bottom: 30px;
+      @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        margin-bottom: 15px;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.mySwiper {
+  width: 100%;
+  @media (max-width: 500px) {
+    display: none;
+  }
+  &__slide {
+    width: 100%;
+    position: relative;
+    > img {
+      display: block;
+      height: 600px;
+      width: 80%;
+      object-fit: cover;
+      margin: 80px auto 80px auto;
+      @media (max-width: 992px) {
+        height: 450px;
+      }
+      @media (max-width: 767px) {
+        height: 350px;
+      }
+      @media (max-width: 500px) {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto 20px auto;
+      }
+    }
+  }
+}
+
+.swiperNavPrev,
+.swiperNavNext {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,16 @@
+.button {
+  width: 147px;
+  height: 42px;
+  background: #000;
+  border-radius: 2px;
+  &:disabled {
+    opacity: 0.3;
+  }
+  span {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 0.8;
+    color: #fff;
+  }
+}

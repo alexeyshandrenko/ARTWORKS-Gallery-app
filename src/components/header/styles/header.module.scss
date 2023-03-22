@@ -1,0 +1,55 @@
+@import "./../../../styles/constants.scss";
+
+.header {
+  height: 100px;
+  @media (max-width: 992px) {
+    height: 80px;
+  }
+  @media (max-width: 767px) {
+    height: 60px;
+  }
+  &__navigation {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    @media (max-width: 500px) {
+      display: block;
+      grid-auto-flow: none;
+      justify-content: none;
+      align-items: none;
+    }
+    > ul {
+      padding: 0 10px;
+      display: grid;
+      grid-auto-flow: column;
+      gap: 45px;
+      @media (max-width: 500px) {
+        display: none;
+      }
+      @media (max-width: 992px) {
+        gap: 40px;
+      }
+      @media (max-width: 767px) {
+        gap: 35px;
+      }
+      > li > a {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 24px;
+        color: #979595;
+        text-transform: uppercase;
+        transition: 0.5s;
+        @media (max-width: 992px) {
+          font-size: 10px;
+        }
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}

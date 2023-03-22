@@ -1,0 +1,52 @@
+.main {
+  flex: 1 0 auto;
+  animation-name: modal;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  &__container {
+    height: 100%;
+    margin: 100px 0;
+    position: relative;
+    @media (max-width: 500px) {
+      margin: 30px 0;
+    }
+  }
+}
+
+.text {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto 100px auto;
+  @media (max-width: 500px) {
+    margin: 0 auto 40px auto;
+  }
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: 500px) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 5px;
+  @media (max-width: 500px) {
+    // grid-auto-rows: 350px;
+    // gap: 10px;
+    display: block;
+  }
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+  100% {
+    opacity: 1;
+  }
+}

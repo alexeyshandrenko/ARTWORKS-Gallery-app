@@ -1,0 +1,122 @@
+.main {
+  flex: 1 0 auto;
+  animation-name: modal;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  &__container {
+    height: 100%;
+    margin: 100px 0;
+    position: relative;
+    padding: 0 20px;
+    @media (max-width: 992px) {
+      margin: 80px 0;
+    }
+    @media (max-width: 767px) {
+      margin: 60px 0;
+    }
+    @media (max-width: 500px) {
+      margin: 20px 0;
+    }
+  }
+}
+
+.text {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media (max-width: 500px) {
+    position: relative;
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, minmax(196px, 1fr));
+  grid-template-areas:
+    ". . . one"
+    ". . . three"
+    ". four two three"
+    "six four eight eight";
+  gap: 20px 10px;
+  @media (max-width: 767px) {
+    grid-template-rows: repeat(4, minmax(156px, 1fr));
+  }
+  @media (max-width: 500px) {
+    grid-template-rows: repeat(4, minmax(36px, 1fr));
+    gap: 10px 5px;
+  }
+
+  &__item {
+    background-color: aquamarine;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      opacity: 0.3;
+      transform: scale(1.01);
+    }
+
+    > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:nth-child(1) {
+      grid-area: one;
+    }
+    &:nth-child(2) {
+      grid-area: two;
+    }
+    &:nth-child(3) {
+      grid-area: three;
+    }
+    &:nth-child(4) {
+      grid-area: four;
+    }
+    &:nth-child(5) {
+      grid-area: five;
+    }
+    &:nth-child(6) {
+      grid-area: six;
+    }
+    &:nth-child(7) {
+      grid-area: seven;
+    }
+    &:nth-child(8) {
+      grid-area: eight;
+    }
+    @media (max-width: 500px) {
+      &:nth-child(5) {
+        grid-area: five;
+      }
+      &:nth-child(7) {
+        grid-area: seven;
+      }
+    }
+  }
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,23 @@
+.input {
+  > label {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #636363;
+    opacity: 1;
+  }
+  > input {
+    display: block;
+    padding: 10px 5px;
+    border: 1px solid #c7c7c7;
+    border-radius: 2px;
+    width: 100%;
+    font-size: 14px;
+    transition: 0.5s;
+    &:hover,
+    &:focus {
+      border: 1px solid #000;
+    }
+  }
+}
