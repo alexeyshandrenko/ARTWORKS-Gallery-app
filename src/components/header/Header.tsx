@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { FC, useContext, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 
 import styles from "./styles/header.module.scss";
 
@@ -13,6 +13,11 @@ import { LocaleContext } from "../wrapper/Wrapper";
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { locale } = useContext(LocaleContext);
+
+  useEffect(() => {
+    const body = document.getElementsByTagName("body")[0];
+    body.style.overflow = isOpen ? "hidden" : "visible";
+  }, [isOpen]);
 
   function toggleMenu() {
     setIsOpen(!isOpen);

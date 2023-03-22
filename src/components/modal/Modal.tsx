@@ -13,9 +13,9 @@ const Modal: FC<ModalProps> = ({
 }) => {
   return isOpen ? (
     <div className={styles.modal}>
-      <button onClick={onClose} className={styles.modal__close}>
+      <div onClick={onClose} className={styles.modal__close}>
         <img src="/images/icons/cancel.png" alt="close" />
-      </button>
+      </div>
       <div className={styles.modal__container}>
         <div className={styles.modal__left}>
           <div className={styles.modal__image}>
