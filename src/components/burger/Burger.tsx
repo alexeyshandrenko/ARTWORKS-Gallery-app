@@ -13,12 +13,6 @@ const Burger: FC<BurgerProps> = ({ toggleMenu, isOpen }) => {
   return (
     <div className={styles.burger}>
       <button className={styles.burger__button} onClick={toggleMenu}>
-        {/* <img
-          src={
-            isOpen ? "/images/icons/cancel.png" : "/images/icons/burger-bar.png"
-          }
-          alt="burger"
-        /> */}
         {isOpen ? <CloseIcon /> : <MenuIcon />}
       </button>
     </div>

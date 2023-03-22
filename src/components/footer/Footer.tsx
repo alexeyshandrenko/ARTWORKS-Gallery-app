@@ -21,7 +21,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/">
+              <a href="https://instagram.com/nnnad?igshid=YmMyMTA2M2Y=">
                 <img src="/images/icons/instagram.png" alt="icon" />
               </a>
             </li>
@@ -30,7 +30,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* <Menu locale={locale} handleChange={handleChange} /> */}
       </Container>
     </footer>
   );

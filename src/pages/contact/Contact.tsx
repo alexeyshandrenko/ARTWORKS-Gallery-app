@@ -29,7 +29,9 @@ const Contact = () => {
               <li>
                 <Description>
                   Instagram&nbsp;&nbsp;
-                  <a href="/">@nnnad</a>
+                  <a href="https://instagram.com/nnnad?igshid=YmMyMTA2M2Y=">
+                    @nnnad
+                  </a>
                 </Description>
               </li>
               <li>
