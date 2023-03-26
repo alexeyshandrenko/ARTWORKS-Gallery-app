@@ -49,6 +49,8 @@ export interface PictureProps {
   type: string;
   title?: string | undefined;
   titleEn?: string | undefined;
+  subtitle?: string | undefined;
+  subtitleEn?: string | undefined;
   description?: string | undefined;
   descriptionEn?: string | undefined;
 }
@@ -63,7 +65,8 @@ export interface ModalProps {
   name: string;
   title?: string;
   type: string;
-  description?: string;
+  subtitle?: string;
+  description?: string | undefined;
   isOpen: boolean;
   onClose: () => void;
 }

@@ -60,6 +60,7 @@ const Pictures = () => {
                     name={picture.name}
                     type={picture.type}
                     title={picture.title}
+                    subtitle={picture.subtitle}
                     description={picture.description}
                   />
                 ) : (
@@ -69,6 +70,7 @@ const Pictures = () => {
                     name={picture.name}
                     type={picture.type}
                     title={picture.titleEn}
+                    subtitle={picture.subtitleEn}
                     description={picture.descriptionEn}
                   />
                 );

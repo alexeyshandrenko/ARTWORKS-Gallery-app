@@ -7,6 +7,7 @@ const Modal: FC<ModalProps> = ({
   name,
   type,
   title,
+  subtitle,
   description,
   isOpen,
   onClose,
@@ -24,8 +25,11 @@ const Modal: FC<ModalProps> = ({
         </div>
         <div className={styles.modal__right}>
           <div className={styles.modal__description}>
-            <div className={styles.modal__title}>{title}</div>
-            <div className={styles.modal__text}>{description}</div>
+            {title && <div className={styles.modal__title}>{title}</div>}
+            {subtitle && <div className={styles.modal__text}>{subtitle}</div>}
+            {description && (
+              <div className={styles.modal__text}>{description}</div>
+            )}
           </div>
         </div>
       </div>

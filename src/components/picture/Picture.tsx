@@ -5,7 +5,13 @@ import styles from "./styles/picture.module.scss";
 import { PictureProps } from "../../model/models";
 import Modal from "../modal/Modal";
 
-const Picture: FC<PictureProps> = ({ name, id, type, description, title }) => {
+const Picture: FC<PictureProps> = ({
+  name,
+  description,
+  type,
+  subtitle,
+  title,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -26,6 +32,7 @@ const Picture: FC<PictureProps> = ({ name, id, type, description, title }) => {
           isOpen={isModalOpen}
           onClose={toggleModal}
           title={title}
+          subtitle={subtitle}
           description={description}
         />
       )}
