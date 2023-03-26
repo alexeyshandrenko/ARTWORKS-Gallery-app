@@ -23,9 +23,15 @@ const Contact = () => {
             <ul className={styles.main__text}>
               <li>
                 <Description>
-                  <a href="/">nadiah@mail.ru</a>
+                  <a href="#">nadiah@mail.ru</a>
                 </Description>
               </li>
+              <li>
+                <Description>
+                  <a href="#">hovaevanadezda@gmail.com</a>
+                </Description>
+              </li>
+
               <li>
                 <Description>
                   Instagram&nbsp;&nbsp;

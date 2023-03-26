@@ -22,13 +22,13 @@ const Home = () => {
               <Title>
                 {locale === "ru"
                   ? "Картинная галерея Надежды Ховаевой"
-                  : "A Picture Gallery by Nadezhda"}
+                  : "An Art Gallery by Nadia"}
               </Title>
             </div>
             <Description>
               {locale === "ru"
                 ? "Надежда исследует механизмы памяти, глубоко укоренившиеся убеждения, эмоции и воспоминания, которые хранятся в системе мозга и управляют жизнью людей на подсознательном уровне. Память выступает связующим звеном между прошлым человека, его настоящим и будущим."
-                : "Nadezhda is convinced that by learning about the inner world, a person can make a new leap in his development. The most powerful element is the one that is inside us. To know it means to gain incredible power!"}
+                : "Nadia is convinced that by learning about the inner world, a person can make a new leap in his development. The most powerful element is the one that is inside us. To know it means to gain incredible power!"}
             </Description>
           </div>
 

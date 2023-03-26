@@ -43,9 +43,11 @@ const Pictures = () => {
               </Title>
             </div>
             <Description>
-              {locale === "ru"
+              {locale === "ru" && picDescription?.title === "Phygital"
                 ? picDescription?.description
-                : picDescription?.descriptionEn}
+                : locale === "en" && picDescription?.title === "Phygital"
+                ? picDescription?.descriptionEn
+                : null}
             </Description>
           </div>
           <div className={styles.grid}>
