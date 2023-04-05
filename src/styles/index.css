@@ -48,6 +48,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: "Lato", "Rubik", sans-serif;
+  background-color: #f0f8ff;
 }
 
 input,

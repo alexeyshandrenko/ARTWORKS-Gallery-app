@@ -22,7 +22,7 @@ const Home = () => {
               <Title>
                 {locale === "ru"
                   ? "Картинная галерея Надежды Ховаевой"
-                  : "An Art Gallery by Nadia"}
+                  : "An Art Gallery by Nadia Hovaeva"}
               </Title>
             </div>
             <Description>
